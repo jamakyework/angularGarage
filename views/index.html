@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Angular Intro</title>
+    <script src="../vendors/angular.1.6/angular.min.js" charset="utf-8"></script>
+    <script src="../scripts/ngLaunchpad.js" charset="utf-8"></script>
+</head>
+
+<body ng-app='myApp'>
+    <div ng-controller='LaunchpadControler'>
+        <h1> NG Launchpad </h1>
+        <h2> Enter your favorite car? </h2>
+        Year: <input type="text" name="" value="" ng-model='carYear'>
+        Make: <input type="text" name="" value="" ng-model='carMake'>
+        Model: <input type="text" name="" value="" ng-model='carModel'>
+        Image: <input type="text" name="" value="" ng-model='carUrl'>
+        <p> What is your favorite car? {{carYear}} {{carMake}} {{carModel}} <img ng-src="{{carUrl}}" /> </p>
+        <button ng-click='getCars()' type="button" name="button">Get Car</button>
+        <ul>
+            <li ng-repeat='cars in favoriteCars'>
+                {{cars}}
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
