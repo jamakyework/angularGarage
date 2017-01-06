@@ -7,12 +7,15 @@ myApp.controller('LaunchpadControler', ['$scope', function($scope) {
     $scope.getCars = function() {
       console.log( 'in getCars()');
       var cars = {
-        year: $scope.carYear,
-        make: $scope.carMake,
-        model: $scope.carModel,
-        imageUrl: $scope.carUrl
+        Year: $scope.carYear,
+        Make: $scope.carMake,
+        Model: $scope.carModel,
+        // imageUrl: $scope.carUrl
       };
       $scope.favoriteCars.push( cars );
       console.log('favoriteCars:', $scope.favoriteCars);
     }; //end getMovieName
 }]);//end controller
+
+
+// <img ng-src="{{carUrl}}"/>

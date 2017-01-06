@@ -15,12 +15,12 @@
         Year: <input type="text" name="" value="" ng-model='carYear'>
         Make: <input type="text" name="" value="" ng-model='carMake'>
         Model: <input type="text" name="" value="" ng-model='carModel'>
-        Image: <input type="text" name="" value="" ng-model='carUrl'>
-        <p> What is your favorite car? {{carYear}} {{carMake}} {{carModel}} <img ng-src="{{carUrl}}" /> </p>
-        <button ng-click='getCars()' type="button" name="button">Get Car</button>
+        ImageUrl: <input type="text" name="" value="" ng-model='carUrl'>
+        <p> What is your favorite car? {{carYear}} {{carMake}} {{carModel}} <img ng-src="{{carUrl}}"/> </p>
+        <button ng-click='getCars()' type="button" name="button">Add Car</button>
         <ul>
             <li ng-repeat='cars in favoriteCars'>
-                {{cars}}
+                {{cars}} <img ng-src="{{carUrl}}"/>
             </li>
         </ul>
     </div>
